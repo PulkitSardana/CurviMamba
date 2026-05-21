@@ -1,0 +1,5 @@
+Variant,Backbone,Neck,HessianGate,TopoLoss,clDice,b0_acc,ec_match,FPS
+B0: UNet baseline,CNN-UNet,Skip,✗,✗,0.571,0.712,0.689,84.3
+B1: YOLO-FPN,CNN-FPN,FPN,✗,✗,0.634,0.743,0.711,112.7
+B2: CurviMamba no gate,Mamba-SSM,FPN,✗,✓,0.681,0.788,0.764,95.1
+B3: CurviMamba (full),Mamba-SSM,FPN,✓,✓,0.724,0.819,0.803,89.6

@@ -1,0 +1,33 @@
+# CurviMamba — default training config
+model:
+  img_size: 640
+  patch_size: 16
+  mamba_depth: 12
+  mamba_d_state: 16
+  mamba_expand: 2
+  hessian_scales: [1, 2, 4, 8, 16]
+  num_classes: 1
+
+loss:
+  w_bce: 1.0
+  w_dice: 1.0
+  w_ec: 0.5
+  w_ph: 0.3
+
+train:
+  epochs: 100
+  batch_size: 8
+  lr: 1.0e-4
+  weight_decay: 1.0e-2
+  scheduler: cosine
+  seed: 42
+
+data:
+  n_train: 8000
+  n_val: 1000
+  n_test: 1000
+  augment: true
+
+eval:
+  metrics: [mAP, clDice, b0_acc, ec_match, iou, fps]
+  iou_threshold: 0.5

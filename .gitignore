@@ -1,0 +1,21 @@
+# Data (populate locally)
+data/raw/
+data/processed/
+
+# Checkpoints
+checkpoints/
+*.pth
+*.pt
+
+# Outputs
+ablation_results/
+baseline_results/
+eval_results/
+runs/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+.env
